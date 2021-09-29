@@ -1,3 +1,4 @@
+# Percentage of expenditure in relation to salary
 salary: float
 expenditure: float
 
