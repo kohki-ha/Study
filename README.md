@@ -1,1 +1,1 @@
-This is a repository containing the languages and technologies I'm learning or have already learned.
+This is a repository containing the technologies I'm learning or have already learned.
