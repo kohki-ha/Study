@@ -1,5 +1,9 @@
 package resumo;
 
+import javax.swing.*;
+import java.util.Locale;
+import java.util.Scanner;
+
 public class resumo {
 
     // variavel global
@@ -14,12 +18,18 @@ public class resumo {
         int idadeIdoso = 60;
         int idadeJoven = 16;
         int totalIdade;
+
         double mediaIdade;
-        double nota1 = 7.4;
-        double nota2 = 8.5;
+        double nota1 = 5.4;
+        double nota2 = 6.7;
         double notaFinal;
+        String situacao;
         String nome = "Alberto";
         String cpf = "111.111.111-11";
+
+        int quantidadeCarros;
+
+        Scanner sc = new Scanner(System.in);
 
         // escreve texto no console
         System.out.println("Letra: " + letra);
@@ -37,7 +47,7 @@ public class resumo {
         // operações aritméticas
         totalIdade = maiorIdade + idadeIdoso + idadeJoven + idadeGlobal;
         mediaIdade = (double) totalIdade / 4;
-        notaFinal = nota1 + nota2 / 2;
+        notaFinal = (nota1 + nota2) / 2;
 
         System.out.println("\nTotal idade: " + totalIdade);
         System.out.println("Media idade: " + mediaIdade);
@@ -47,8 +57,31 @@ public class resumo {
         // operações lógicas
         if (notaFinal >= 6)
             System.out.println("\nAprovado!");
+        else if (notaFinal > 3 && notaFinal < 6)
+            System.out.println("\nRecuperação...");
         else
-            System.out.println("\nReprovado...");
+            System.out.println("\nReprovado");
+
+        // operador ternário
+        situacao = notaFinal >= 6 ? "aprovado" : "reprovado";
+        situacao = notaFinal >= 6 ? "aprovado" : notaFinal > 3 && notaFinal < 6 ? "recuperação" : "reprovado";
+        System.out.println("\n" + situacao);
+
+        for (int i = 0; i < 5; i++)
+        {
+            System.out.println(i);
+        }
+
+        // entrada de dados
+
+        quantidadeCarros =  Integer.parseInt(JOptionPane.showInputDialog("Informe a quantidade de carros"));
+        System.out.println("Quantidade de carros: " + quantidadeCarros);
+
+        JOptionPane.showMessageDialog(null, "Numero de carros: " + quantidadeCarros);
+
+        nome = sc.nextLine();
+
+        System.out.println("Novo nome: " + nome);
     }
 
     public static void metodo2() {
