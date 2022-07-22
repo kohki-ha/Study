@@ -67,14 +67,13 @@ public class resumo {
         situacao = notaFinal >= 6 ? "aprovado" : notaFinal > 3 && notaFinal < 6 ? "recuperação" : "reprovado";
         System.out.println("\n" + situacao);
 
-        for (int i = 0; i < 5; i++)
-        {
+        for (int i = 0; i < 5; i++) {
             System.out.println(i);
         }
 
         // entrada de dados
 
-        quantidadeCarros =  Integer.parseInt(JOptionPane.showInputDialog("Informe a quantidade de carros"));
+        quantidadeCarros = Integer.parseInt(JOptionPane.showInputDialog("Informe a quantidade de carros"));
         System.out.println("Quantidade de carros: " + quantidadeCarros);
 
         JOptionPane.showMessageDialog(null, "Numero de carros: " + quantidadeCarros);
