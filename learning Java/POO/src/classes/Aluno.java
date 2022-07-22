@@ -27,7 +27,7 @@ public class Aluno {
 
     // SETTERS  e GETTERS do objeto
     // SET é para adicionar ou receber dados
-    // GET é para resgatar ou obter valor do satirbut
+    // GET é para resgatar ou obter valor do atributo
     public String getNome() {
         return nome;
     }
@@ -74,5 +74,20 @@ public class Aluno {
 
     public void setNota4(double nota4) {
         this.nota4 = nota4;
+    }
+
+    // Método que retorna a média do aluno
+    public double getMediaNota() {
+        return (nota1 + nota2 + nota3 + nota4) / 4;
+    }
+
+    // Método que retorna true se o aluno está aprovado
+    public boolean getAprovado() {
+        double media = this.getMediaNota();
+
+        if (media >= 6)
+            return true;
+        else
+            return false;
     }
 }
