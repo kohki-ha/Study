@@ -15,6 +15,8 @@ public class PrimeiraClasse {
         //aluno1.idade = 26;
 
         aluno1.setNome("João");
+        aluno1.setIdade(26);
 
+        System.out.println(aluno1.getNome() + " tem " + aluno1.getIdade() + " anos.");
     }
 }

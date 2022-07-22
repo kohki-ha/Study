@@ -6,11 +6,10 @@ public class Aluno {
     // pro padrão os atributos são privados
     public String nome;
     public int idade;
-    String daraNascimento;
-    String registroGeral;
-    String numeroCPF;
-    String nomeEscola;
-    String serieMatriculado;
+    double nota1;
+    double nota2;
+    double nota3;
+    double nota4;
 
     // usar o "new" chama o construtor abaixo
     public Aluno() { // cria os dados na memoria - sendo padrão do Java
@@ -45,43 +44,35 @@ public class Aluno {
         this.idade = idade;
     }
 
-    public String getDaraNascimento() {
-        return daraNascimento;
+    public double getNota1() {
+        return nota1;
     }
 
-    public void setDaraNascimento(String daraNascimento) {
-        this.daraNascimento = daraNascimento;
+    public void setNota1(double nota1) {
+        this.nota1 = nota1;
     }
 
-    public String getRegistroGeral() {
-        return registroGeral;
+    public double getNota2() {
+        return nota2;
     }
 
-    public void setRegistroGeral(String registroGeral) {
-        this.registroGeral = registroGeral;
+    public void setNota2(double nota2) {
+        this.nota2 = nota2;
     }
 
-    public String getNumeroCPF() {
-        return numeroCPF;
+    public double getNota3() {
+        return nota3;
     }
 
-    public void setNumeroCPF(String numeroCPF) {
-        this.numeroCPF = numeroCPF;
+    public void setNota3(double nota3) {
+        this.nota3 = nota3;
     }
 
-    public String getNomeEscola() {
-        return nomeEscola;
+    public double getNota4() {
+        return nota4;
     }
 
-    public void setNomeEscola(String nomeEscola) {
-        this.nomeEscola = nomeEscola;
-    }
-
-    public String getSerieMatriculado() {
-        return serieMatriculado;
-    }
-
-    public void setSerieMatriculado(String serieMatriculado) {
-        this.serieMatriculado = serieMatriculado;
+    public void setNota4(double nota4) {
+        this.nota4 = nota4;
     }
 }
