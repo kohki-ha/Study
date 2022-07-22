@@ -1,0 +1,42 @@
+package executavel;
+
+public class executavel {
+	
+	// variavel global
+	static int idadeGlobal = 30;
+	
+	// main é um método auto executavel em Java
+	public static void main(String[] args) {
+
+		// variaveis locais
+		int maiorIdade = 18;
+		int idadeIdoso = 60;
+		int idadeJoven = 16;
+		int totalIdade;
+		String cpf = "111.111.111-11";
+
+		// escreve texto no console
+		System.out.println("Meu primeiro programa em Java");
+
+		System.out.println("Maior idade: " + maiorIdade);
+		System.out.println("Idade idoso: " + idadeIdoso);
+		System.out.println("Idade jovem: " + idadeJoven);
+		System.out.println("CPF: " + cpf);
+		
+		System.out.println("Idade global pela main: " + idadeGlobal);
+		
+		// invocar methodo2
+		metodo2();
+		
+		// operações
+		totalIdade = maiorIdade + idadeIdoso + idadeJoven + idadeGlobal;
+		
+		System.out.println("Total idade: " + totalIdade);
+		
+		
+	}
+	
+	public static void metodo2 () {
+		System.out.println("Idade global pelo metodo2: " + idadeGlobal);
+	}
+}
