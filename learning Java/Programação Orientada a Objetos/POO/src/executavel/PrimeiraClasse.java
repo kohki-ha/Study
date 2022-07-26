@@ -22,7 +22,7 @@ public class PrimeiraClasse {
         aluno1.setNome(nome);
         aluno1.setIdade(Integer.parseInt(idade));
 
-        for (int i = 1; i <=4; i++){
+        for (int i = 0; i < 4; i++) {
             String nomeDisciplina = JOptionPane.showInputDialog("Qual o nome da disciplina " + i + " ?");
             String nota = JOptionPane.showInputDialog("Nota da disciplina " + i);
 

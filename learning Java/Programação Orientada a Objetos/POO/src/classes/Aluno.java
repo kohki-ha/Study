@@ -7,23 +7,13 @@ import java.util.Objects;
 // classe para representar u aluno
 public class Aluno {
     // atributos de Aluno
-    // pro padrão os atributos são privados
+    // por padrão os atributos são privados
     String nome;
     int idade;
-
     List<Disciplina> disciplinas = new ArrayList<Disciplina>();
 
-    public List<Disciplina> getDisciplinas() {
-        return disciplinas;
-    }
-
-    public void setDisciplinas(List<Disciplina> disciplinas) {
-        this.disciplinas = disciplinas;
-    }
-
     // usar o "new" chama o construtor abaixo
-    public Aluno() { // cria os dados na memoria - sendo padrão do Java
-
+    public Aluno() { // cria os dados na memória — sendo padrão do Java ('alt' + 0151: —)
     }
 
     public Aluno(String nomePadrao) {
@@ -34,7 +24,29 @@ public class Aluno {
         nome = nomePadrao;
         idade = idadePadrao;
     }
+    // -----------------------------------------------------------------------------------------------------------------------
 
+    // Método que retorna a média do aluno
+    public double getMediaNota() {
+        double somaNotas = 0.0;
+
+        // Percorrer lista
+        for (Disciplina disciplina : disciplinas) {
+            somaNotas += disciplina.getNota();
+        }
+        return somaNotas / disciplinas.size();
+    }
+
+    // Método que retorna true se o aluno está aprovado
+    public boolean getAprovado() {
+        double media = this.getMediaNota();
+
+        if (media >= 6)
+            return true;
+        else return false;
+    }
+
+    // -----------------------------------------------------------------------------------------------------------------------
     // SETTERS  e GETTERS do objeto
     // SET é para adicionar ou receber dados
     // GET é para resgatar ou obter valor do atributo
@@ -54,34 +66,12 @@ public class Aluno {
         this.idade = idade;
     }
 
-
-    // Método que retorna a média do aluno
-    public double getMediaNota() {
-        double somaNotas = 0.0;
-
-        // Percorrer lista
-        for (Disciplina disciplina : disciplinas) {
-            somaNotas += disciplina.getNota();
-        }
-        return somaNotas / disciplinas.size();
+    public List<Disciplina> getDisciplinas() {
+        return disciplinas;
     }
 
-    // Método que retorna true se o aluno está aprovado
-    public boolean getAprovado() {
-        double media = this.getMediaNota();
-
-        if (media >= 6)
-            return true;
-        else
-            return false;
-    }
-
-    @Override
-    public String toString() {
-        return "Aluno{" +
-                "nome='" + nome + '\'' +
-                ", idade=" + idade +
-                '}';
+    public void setDisciplinas(List<Disciplina> disciplinas) {
+        this.disciplinas = disciplinas;
     }
 
     @Override
@@ -95,5 +85,14 @@ public class Aluno {
     @Override
     public int hashCode() {
         return Objects.hash(nome);
+    }
+
+    @Override
+    public String toString() {
+        return "Aluno{" +
+                "nome='" + nome + '\'' +
+                ", idade=" + idade +
+                ", disciplinas=" + disciplinas +
+                '}';
     }
 }
