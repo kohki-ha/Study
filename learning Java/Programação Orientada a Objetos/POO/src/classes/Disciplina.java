@@ -3,8 +3,8 @@ package classes;
 import java.util.Objects;
 
 public class Disciplina {
-    double nota;
     String disciplina;
+    double nota;
 
     public double getNota() {
         return nota;
@@ -38,8 +38,8 @@ public class Disciplina {
     @Override
     public String toString() {
         return "Disciplina{" +
-                "nota=" + nota +
-                ", disciplina='" + disciplina + '\'' +
+                "disciplina='" + disciplina + '\'' +
+                ", nota=" + nota +
                 '}';
     }
 }

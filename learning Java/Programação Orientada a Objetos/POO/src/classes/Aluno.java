@@ -1,5 +1,7 @@
 package classes;
 
+import constantes.StatusAluno;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -44,6 +46,17 @@ public class Aluno {
         if (media >= 6)
             return true;
         else return false;
+    }
+
+    public String getAprovado2() {
+        double media = this.getMediaNota();
+
+        if (media >= 6)
+            return StatusAluno.APROVADO;
+        else if (media >= 3)
+            return StatusAluno.RECUPERACAO;
+        else
+            return StatusAluno.REPROVADO;
     }
 
     // -----------------------------------------------------------------------------------------------------------------------

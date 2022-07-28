@@ -4,8 +4,10 @@ import classes.Aluno;
 import classes.Disciplina;
 
 import javax.swing.*;
+import java.util.ArrayList;
+import java.util.List;
 
-public class PrimeiraClasse {
+public class _1AlunoSemLista {
     public static void main(String[] args) {
 
         // new aluno() é uma instancia (criação de um objeto)
@@ -15,6 +17,7 @@ public class PrimeiraClasse {
         Aluno aluno3 = new Aluno("José", 50);
         Aluno aluno4;
         Aluno aluno5;
+
 
         String nome = JOptionPane.showInputDialog("Qual o nome do aluno?");
         String idade = JOptionPane.showInputDialog("Qual a idade?");
@@ -33,13 +36,28 @@ public class PrimeiraClasse {
             aluno1.getDisciplinas().add(disciplina);
         }
 
+        int escolha = JOptionPane.showConfirmDialog(null, "Deseja remover alguma disciplina?");
+
+        if (escolha == 0) {
+            int continuarRemover = 0;
+            int posicao = 0;
+
+            while (continuarRemover == 0) {
+                String disciplinaRemover = JOptionPane.showInputDialog("Qual a disciplina a ser removida?");
+                aluno1.getDisciplinas().remove(Integer.parseInt(disciplinaRemover) - posicao);
+                posicao++;
+                continuarRemover = JOptionPane.showConfirmDialog(null, "Continuar a remover?");
+            }
+
+        }
+
         /*-------------------------------------------------------------------------------------------------------*/
 
         //System.out.println(aluno1.getNome() + " tem " + aluno1.getIdade() + " anos.");
         // Se o 'toString' não estiver configurado, mostra o endereço, se não, mostra a descrição
         System.out.println(aluno1.toString());
         System.out.println("Média da nota é " + aluno1.getMediaNota());
-        System.out.println("Resultado = " + (aluno1.getAprovado() ? "aprovado\n\n" : "reprovado\n\n"));
+        System.out.println("Resultado = " + (aluno1.getAprovado() ? "aprovado\n" : "reprovado\n"));
 
         // Equals e Hashcodes
         // (diferenciar e comparar objetos)
