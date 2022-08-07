@@ -23,5 +23,18 @@ public class Main {
 
         System.out.println(secretario.getNome());
         System.out.println(secretario.salario());
+
+        Pessoa pessoa = new Aluno();
+        pessoa = secretario;
+
+        teste(aluno);
+        teste(diretor);
+        teste(secretario);
+        teste(pessoa);
+    }
+
+    public static void teste(Pessoa pessoa) {
+        System.out.println("\n\nPessoa: " + pessoa.getNome()
+                + "\nsalario: " + pessoa.salario());
     }
 }
